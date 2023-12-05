@@ -1,0 +1,13 @@
+*{
+    padding: 5px;
+}
+table{
+    border: 2px inset green;
+    background-color: aquamarine;
+}
+#b1{
+    background-color: brown;
+}
+#b2{
+    background-color: blue;
+}

@@ -1,0 +1,16 @@
+*{
+    padding: 5px;
+}
+table{
+    background-color: bisque;
+    border: 1px solid black;
+}
+#button1{
+    background-color: brown;
+}
+#button2{
+    background-color: burlywood;
+}
+caption{
+    color: rgb(235, 128, 35);
+}

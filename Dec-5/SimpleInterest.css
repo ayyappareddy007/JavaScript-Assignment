@@ -1,0 +1,13 @@
+*{
+    padding: 6px;
+}
+table{
+    border: 2px solid yellowgreen;
+    background-color: aqua;
+}
+#b1{
+    background-color: rgb(196, 45, 45);
+}
+#b2{
+    background-color: goldenrod
+}

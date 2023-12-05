@@ -1,0 +1,13 @@
+table{
+    background-color: silver;
+    border: 2px dotted rebeccapurple;
+}
+*{
+    padding: 5px;
+}
+#id2{
+    background-color: greenyellow;
+}
+#id3{
+    background-color: red;
+}

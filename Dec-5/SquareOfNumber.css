@@ -1,0 +1,16 @@
+*{
+    padding: 5px;
+}
+table{
+    border: 3px outset green;
+    background-color: blueviolet;
+}
+#b1{
+    background-color: tomato;
+}
+#b2{
+    background-color: wheat;
+}
+label{
+    color: turquoise;
+}
