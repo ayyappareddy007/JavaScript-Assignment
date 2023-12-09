@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Billing Counter</title>
+        <script>
+            var costs = []
+            function itemsCost(){
+                var n = parseFloat(document.getElementById('id1').value)
+                if (n == "") {
+                    alert('Enter valid amount')
+                }
+                else{
+                    costs.push(n)
+                    var str = ''
+                    for(var i=0; i<costs.length;i++){
+                        str = str + '<li>' + costs[i] + '</li>'
+                    }
+                    document.getElementById('id2').innerHTML = str
+                }   
+            }
+            var totalCost
+            function total(){
+                totalCost = 0
+                for(var i=0;i<costs.length;i++){
+                    totalCost = totalCost + costs[i]
+                }
+                document.getElementById('span1').innerHTML = totalCost
+            }
+            var afterDiscount
+            function discount(){
+                afterDiscount = 0
+                afterDiscount = totalCost * 0.95   // afterDiscount is the total price after removing discount price
+                document.getElementById('span2').innerHTML = afterDiscount.toFixed(2);
+            }
+            var afterGst
+            function gst(){
+                afterGst = 0
+                afterGst = afterDiscount * 1.18   // afterGst is the total price after adding Gst
+                document.getElementById('span3').innerHTML = afterGst.toFixed(2);
+            }
+        </script>
+    </head>
+    <body>
+        <label for="id1">Enter item cost</label>
+        <input type="number" id="id1">
+        <button onclick="itemsCost()">Add</button>
+        <br><br><br>
+        <ul id="id2">
+
+        </ul>
+        <br><br>
+        <table>
+            <tr>
+                <td><button onclick="total()">Total</button></td>
+                <td><button onclick="discount()">Total with 5% discount</button></td>
+                <td><button onclick="gst()">Total with 18% Gst</button></td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <span id="span1"></span>
+                </td>
+                <td align="center">
+                    <span id="span2"></span>
+                </td>
+                <td align="center">
+                    <span id="span3"></span>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>
