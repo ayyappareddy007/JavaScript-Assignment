@@ -5,12 +5,12 @@
         <script>
             var costs = []
             function itemsCost(){
-                var n = parseFloat(document.getElementById('id1').value)
+                var n = document.getElementById('id1').value
                 if (n == "") {
                     alert('Enter valid amount')
                 }
                 else{
-                    costs.push(n)
+                    costs.push(parseFloat(n))
                     var str = ''
                     for(var i=0; i<costs.length;i++){
                         str = str + '<li>' + costs[i] + '</li>'
@@ -24,7 +24,12 @@
                 for(var i=0;i<costs.length;i++){
                     totalCost = totalCost + costs[i]
                 }
-                document.getElementById('span1').innerHTML = totalCost
+                if(totalCost == 0){
+                    alert('add atleast one item cost to calculate the total')
+                }
+                else{
+                    document.getElementById('span1').innerHTML = totalCost
+                }
             }
             var afterDiscount
             function discount(){
